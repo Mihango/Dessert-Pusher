@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         binding.revenue = revenue
         binding.amountSold = dessertsSold
 
-        // Make sure the correct dessert is showing
+        // Make sure the correct dessert is showingF
         binding.dessertButton.setImageResource(currentDessert.imageId)
     }
 
