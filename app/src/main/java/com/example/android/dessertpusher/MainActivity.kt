@@ -70,7 +70,8 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
         // Use Data Binding to get reference to the views
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        dessertTimer = DessertTimer()
+        dessertTimer = DessertTimer(this.lifecycle)
+
 
         binding.dessertButton.setOnClickListener {
             onDessertClicked()
@@ -155,7 +156,7 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     override fun onStart() {
         super.onStart()
-        dessertTimer.startTimer()
+        // dessertTimer.startTimer()
         Timber.i("onStart called")
     }
 
@@ -181,7 +182,7 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     override fun onStop() {
         super.onStop()
-        dessertTimer.stopTimer()
+        // dessertTimer.stopTimer()
         Timber.i("onStop called")
     }
 }
